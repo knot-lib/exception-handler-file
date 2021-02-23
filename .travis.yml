@@ -9,7 +9,7 @@ php:
 before_script:
   - phpenv config-add .travis.php.ini
   - composer update
-  - ls -a vendor/stk2k/file/src
+  - cat vendor/stk2k/file/src/File.php
 
 script:
   - echo $(phpenv version-name)
