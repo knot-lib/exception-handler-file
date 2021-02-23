@@ -7,11 +7,15 @@ use PHPUnit\Framework\TestCase;
 use Stk2k\File\File;
 
 use KnotLib\ExceptionHandler\File\FileExceptionHandler;
-use KnotLib\Exception\Runtime\HttpStatusException;
 use KnotLib\ExceptionHandler\Text\TextDebugtraceRenderer;
 
 class FileExceptionHandlerTest extends TestCase
 {
+    /**
+     * @throws \Stk2k\File\Exception\FileInputException
+     * @throws \Stk2k\File\Exception\FileOutputException
+     * @throws \Stk2k\File\Exception\MakeDirectoryException
+     */
     public function testHandleException()
     {
         //======================================
