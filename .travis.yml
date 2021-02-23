@@ -8,7 +8,7 @@ php:
 
 before_script:
   - phpenv config-add .travis.php.ini
-  - composer install
+  - composer update
 
 script:
   - echo $(phpenv version-name)
