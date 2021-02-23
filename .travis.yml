@@ -9,6 +9,8 @@ php:
 before_script:
   - phpenv config-add .travis.php.ini
   - composer update
+  - composer dumpautoload -o
+  - cat vendor/composer/autoload_classmap.php
 
 script:
   - echo $(phpenv version-name)
