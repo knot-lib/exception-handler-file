@@ -3,8 +3,11 @@ declare(strict_types=1);
 
 namespace KnotLib\ExceptionHandler\File\Test;
 
+use Exception;
 use PHPUnit\Framework\TestCase;
-use Stk2k\File\File;
+use Stk2k\File\Exception\FileInputException;
+use Stk2k\File\Exception\FileOutputException;
+use Stk2k\File\Exception\MakeDirectoryException;
 
 use KnotLib\ExceptionHandler\File\FileExceptionHandler;
 use KnotLib\ExceptionHandler\Text\TextDebugtraceRenderer;
@@ -12,20 +15,20 @@ use KnotLib\ExceptionHandler\Text\TextDebugtraceRenderer;
 class FileExceptionHandlerTest extends TestCase
 {
     /**
-     * @throws \Stk2k\File\Exception\FileInputException
-     * @throws \Stk2k\File\Exception\FileOutputException
-     * @throws \Stk2k\File\Exception\MakeDirectoryException
+     * @throws FileInputException
+     * @throws FileOutputException
+     * @throws MakeDirectoryException
      */
     public function testHandleException()
     {
         //======================================
         // exception_1.txt
         //======================================
-        $file = new File("exception_1.txt", __DIR__ . "/tmp");
+        $file = new \Stk2k\File\File("exception_1.txt", __DIR__ . "/tmp");
 
         $handler = new FileExceptionHandler($file, new TextDebugtraceRenderer);
 
-        $e = new \Exception("test");
+        $e = new Exception("test");
 
         $handler->handleException($e);
 
