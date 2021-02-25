@@ -5,6 +5,7 @@ namespace KnotLib\ExceptionHandler\File\Test;
 
 use Exception;
 use PHPUnit\Framework\TestCase;
+use Stk2k\File\File;
 use Stk2k\File\Exception\FileInputException;
 use Stk2k\File\Exception\FileOutputException;
 use Stk2k\File\Exception\MakeDirectoryException;
@@ -21,10 +22,12 @@ class FileExceptionHandlerTest extends TestCase
      */
     public function testHandleException()
     {
+        $tmpdir = new File(__DIR__ . "/tmp");
+
         //======================================
         // exception_1.txt
         //======================================
-        $file = new \Stk2k\File\File("exception_1.txt", __DIR__ . "/tmp");
+        $file = new File("exception_1.txt", $tmpdir);
 
         $handler = new FileExceptionHandler($file, new TextDebugtraceRenderer);
 
@@ -46,7 +49,7 @@ class FileExceptionHandlerTest extends TestCase
         //======================================
         // exception_2.txt
         //======================================
-        $file = new File("exception_2.txt", __DIR__ . "/tmp");
+        $file = new File("exception_2.txt", $tmpdir);
 
         $handler = new FileExceptionHandler($file, new TextDebugtraceRenderer);
 
