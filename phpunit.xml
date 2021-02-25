@@ -15,6 +15,7 @@
          stopOnIncomplete="false"
          stopOnSkipped="false"
          stopOnRisky="false"
+         bootstrap="vendor/autoload.php"
 >
     <testsuites>
         <testsuite name="knot-lib/exception-handler Tests">
