@@ -4,4 +4,7 @@ vendor/*
 !.gitkeep
 build/*
 coverage/*
-test/tmp/*.txt
+logs/*
+sample/cache/*
+sample/.htaccess
+.phpunit.result.cache

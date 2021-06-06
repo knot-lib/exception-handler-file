@@ -1,14 +1,16 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotLib\ExceptionHandler\File;
+namespace knotlib\exceptionhandler\file;
 
-use KnotLib\ExceptionHandler\DebugtraceRendererInterface;
-use KnotLib\ExceptionHandler\ExceptionHandlerInterface;
+use Throwable;
+
 use Stk2k\File\Exception\FileOutputException;
 use Stk2k\File\Exception\MakeDirectoryException;
 use Stk2k\File\File;
-use Throwable;
+
+use knotlib\exceptionhandler\DebugtraceRendererInterface;
+use knotlib\exceptionhandler\ExceptionHandlerInterface;
 
 class FileExceptionHandler implements ExceptionHandlerInterface
 {

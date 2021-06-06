@@ -1,0 +1,51 @@
+=============================================================
+Exception stack trace
+=============================================================
+
+* Exception Stack *
+-------------------------------------------------------------
+[1]knotlib\exceptionhandler\file\test\SampleException
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\test\FileExceptionHandlerTest.php(56)
+   sample exception
+
+[2]Exception
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\test\SampleException.php(12)
+   this is cause
+
+* Call Stack *
+-------------------------------------------------------------
+[0]knotlib\exception\KnotPhpException->__construct()
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\test\SampleException.php(12)
+
+[1]knotlib\exceptionhandler\file\test\SampleException->__construct()
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\test\FileExceptionHandlerTest.php(56)
+
+[2]knotlib\exceptionhandler\file\test\FileExceptionHandlerTest->testHandleException()
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\vendor\phpunit\phpunit\src\Framework\TestCase.php(1472)
+
+[3]PHPUnit\Framework\TestCase->runTest()
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\vendor\phpunit\phpunit\src\Framework\TestCase.php(1092)
+
+[4]PHPUnit\Framework\TestCase->runBare()
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\vendor\phpunit\phpunit\src\Framework\TestResult.php(703)
+
+[5]PHPUnit\Framework\TestResult->run()
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\vendor\phpunit\phpunit\src\Framework\TestCase.php(820)
+
+[6]PHPUnit\Framework\TestCase->run()
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\vendor\phpunit\phpunit\src\Framework\TestSuite.php(627)
+
+[7]PHPUnit\Framework\TestSuite->run()
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\vendor\phpunit\phpunit\src\Framework\TestSuite.php(627)
+
+[8]PHPUnit\Framework\TestSuite->run()
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\vendor\phpunit\phpunit\src\TextUI\TestRunner.php(656)
+
+[9]PHPUnit\TextUI\TestRunner->doRun()
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\vendor\phpunit\phpunit\src\TextUI\Command.php(236)
+
+[10]PHPUnit\TextUI\Command->run()
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\vendor\phpunit\phpunit\src\TextUI\Command.php(195)
+
+[11]PHPUnit\TextUI\Command::main()
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\vendor\phpunit\phpunit\phpunit(61)

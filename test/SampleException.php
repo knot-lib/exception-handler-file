@@ -1,10 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotLib\ExceptionHandler\File\Test;
+namespace knotlib\exceptionhandler\file\test;
 
-use KnotLib\Exception\KnotPhpException;
-use Throwable;
+use knotlib\exception\KnotPhpException;
 
 final class SampleException extends KnotPhpException
 {

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace KnotLib\ExceptionHandler\File\Test;
+namespace knotlib\exceptionhandler\file\test;
 
 use Exception;
 use PHPUnit\Framework\TestCase;
@@ -10,8 +10,8 @@ use Stk2k\File\Exception\FileInputException;
 use Stk2k\File\Exception\FileOutputException;
 use Stk2k\File\Exception\MakeDirectoryException;
 
-use KnotLib\ExceptionHandler\File\FileExceptionHandler;
-use KnotLib\ExceptionHandler\Text\TextDebugtraceRenderer;
+use knotlib\exceptionhandler\file\FileExceptionHandler;
+use knotlib\exceptionhandler\text\TextDebugtraceRenderer;
 
 class FileExceptionHandlerTest extends TestCase
 {
@@ -65,13 +65,13 @@ class FileExceptionHandlerTest extends TestCase
         $this->assertEquals('', $output[3] ?? null);
         $this->assertEquals('* Exception Stack *', $output[4] ?? null);
         $this->assertEquals('-------------------------------------------------------------', $output[5] ?? null);
-        $this->assertEquals('[1]KnotLib\ExceptionHandler\File\Test\SampleException', $output[6] ?? null);
+        $this->assertEquals('[1]knotlib\exceptionhandler\file\test\SampleException', $output[6] ?? null);
         $this->assertEquals('   sample exception', $output[8] ?? null);
         $this->assertEquals('[2]Exception', $output[10] ?? null);
         $this->assertEquals('   this is cause', $output[12] ?? null);
         $this->assertEquals('* Call Stack *', $output[14] ?? null);
         $this->assertEquals('-------------------------------------------------------------', $output[15] ?? null);
-        $this->assertEquals('[0]KnotLib\Exception\KnotPhpException->__construct()', $output[16] ?? null);
-        $this->assertEquals('[1]KnotLib\ExceptionHandler\File\Test\SampleException->__construct()', $output[19] ?? null);
+        $this->assertEquals('[0]knotlib\exception\KnotPhpException->__construct()', $output[16] ?? null);
+        $this->assertEquals('[1]knotlib\exceptionhandler\file\test\SampleException->__construct()', $output[19] ?? null);
     }
 }

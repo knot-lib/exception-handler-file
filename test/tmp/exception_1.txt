@@ -1,0 +1,9 @@
+=============================================================
+Exception stack trace
+=============================================================
+
+* Exception Stack *
+-------------------------------------------------------------
+[1]Exception
+   C:\Workspace\GitHub\knot-lib\exception-handler-file\test\FileExceptionHandlerTest.php(34)
+   test
